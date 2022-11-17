@@ -1,0 +1,328 @@
+.page {
+
+    // .contacts__contact
+    &__contact {
+        padding: 152px 0 90px;
+    }
+}
+
+
+//====================================================================================================
+
+.contacts {
+
+    // .contacts__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    // .contacts__content
+    &__content {
+        flex: 1 1 35%;
+    }
+
+    // .contacts__map
+    &__map {
+        flex: 0 1 57%;
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 46%;
+            top: 44%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: url('../img/icons/pin-solid.svg') center no-repeat;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.contacts-info {
+
+    // .contacts-info__subtitle
+    &__subtitle:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    // .contacts-info__title
+    &__title:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    // .contacts-info__list
+    &__list:not(:last-child) {
+        margin-bottom: 48px;
+    }
+
+    // .contacts-info__item
+    &__item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    // .contacts-info__link
+    &__link {}
+
+    // .contacts-info__share
+    &__share {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        .share__list {
+            gap: 32px;
+        }
+
+        .share__title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #1E212C;
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    gap: 12px;
+
+    // .contact__icon
+    &__icon {
+        width: 24px;
+        height: 24px;
+
+        svg {
+            width: 100%;
+            height: 22px;
+
+            path {
+                fill: #FF3F3A;
+            }
+        }
+    }
+
+    // .contact__info
+    &__info {}
+
+    // .contact__text
+    &__text {
+        color: #787A80;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    // .contact__adress
+    &__adress {
+        color: #1E212C;
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+
+//====================================================================================================
+
+
+.questions {
+
+    // .questions__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .questions__img
+    &__img {
+        flex: 0 1 35%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .questions__content
+    &__content {
+        flex: 0 0 57%;
+    }
+
+    // .questions__subtitle
+    &__subtitle {}
+
+    // .questions__title
+    &__title {}
+
+    // .questions__form
+    &__form {}
+}
+
+.form-questions {
+
+    // .form-questions__line
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        &:has(>textarea) {
+            display: block;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    // .form-questions__block
+    &__block {
+        flex: 1 1 48%;
+    }
+
+    // .form-questions__label
+    &__label {
+        display: block;
+        color: #424551;
+        margin-bottom: 8px;
+    }
+
+    // .form-questions__input
+    &__input {
+        padding: 13px 16px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        width: 100%;
+        resize: none;
+        color: #9A9CA5;
+
+        &::placeholder {
+            color: inherit;
+        }
+
+        &[name="message"] {
+            height: 128px;
+        }
+    }
+
+    // .form-questions__agree
+    &__agree {
+        max-width: 315px;
+
+        .form-questions__label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 24px;
+
+
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 6px;
+                content: '';
+                width: 16px;
+                height: 16px;
+                background: #fff;
+                border: 1px solid #FF3F3A;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    // .form-questions__checkbox
+    &__checkbox {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:focus+.form-questions__label::before {
+            outline: 1px solid #000;
+        }
+
+        &:checked+.form-questions__label:before {
+            background: #FF3F3A;
+        }
+
+        &:checked+.form-questions__label:after {
+            position: absolute;
+            content: '';
+            left: 3px;
+            top: 10px;
+            width: 10px;
+            height: 8px;
+            background: url('../img/icons/checkbox.svg') center no-repeat;
+        }
+    }
+
+    // .form-questions__checkbox-label
+    &__checkbox-label {}
+
+    // .form-questions__button
+    &__button {
+        padding: 0 117px;
+    }
+
+    // .form-questions__radio
+    &__radio {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &+.form-questions__label {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        &+.form-questions__label::before {
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: 1px solid #FF3F3A;
+        }
+        
+        &:checked+.form-questions__label::after {
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+        }
+
+        &:focus+.form-questions__label::before {
+            outline: 1px solid #000;
+        }
+        
+        &:checked+.form-questions__label:before {
+            background: #FF3F3A;
+        }
+    }
+
+
+}

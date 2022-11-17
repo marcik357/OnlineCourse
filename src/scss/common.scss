@@ -1,0 +1,243 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+    color: #1E212C;
+
+    @media (max-width: 479.98px) {
+        font-size: 36px;
+    }
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1E212C;
+}
+
+
+//====================================================================================================
+
+
+.button-basic {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 325%;
+    letter-spacing: 0.5px;
+    padding: 0 40px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #fff;
+    transition: all .5s;
+    flex-shrink: 0;
+
+    &:hover {
+        background: transparent;
+        border: 1px solid #ff3f3a;
+        color: #ff3f3a;
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 20px;
+    }
+}
+
+.button-basic--transparent {
+    background: transparent;
+    border: 1px solid #ff3f3a;
+    color: #ff3f3a;
+
+    &:hover {
+        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        border: 1px solid transparent;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 20px;
+    }
+}
+
+.button-basic--reg {
+    padding: 0 32px;
+
+    @media screen and (max-width: 1024px) {
+        padding: 0 20px;
+    }
+}
+
+
+//====================================================================================================
+
+
+.list {
+    li {
+        padding-left: 32px;
+        position: relative;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 4px;
+    }
+
+    li[class*="_icon-"]:before {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        color: #FF3F3A;
+    }
+}
+
+
+//====================================================================================================
+
+
+.marketing {
+    background: #03CEA4;
+}
+
+.management {
+    background: #5A87FC;
+}
+
+.hr {
+    background: #F89828;
+}
+
+.design {
+    background: #F52F6E;
+}
+
+
+//====================================================================================================
+
+
+.info {
+    margin-bottom: 60px;
+
+    // .info__subtitle
+    &__subtitle {}
+
+    // .info__title
+    &__title {}
+}
+
+
+//====================================================================================================
+
+
+.share {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: 12px;
+    }
+
+    // .share__list
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    // .share__link
+    &__link {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        svg {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+        }
+
+        path {
+            transition: all .3s;
+        }
+
+        &:hover path {
+            fill: #FF3F3A;
+        }
+    }
+}
+
+
+//====================================================================================================
+
+
+.tags {
+    span {
+        color: #1E212C;
+        font-weight: 700;
+    }
+
+    // .tags__list
+    &__list {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    // .tags__item
+    &__item {}
+
+    // .tags__link
+    &__link {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 150%;
+        color: #787A80;
+        padding: 6px 16px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        transition: all .5s;
+
+        &::before {
+            content: '#';
+        }
+
+        &:hover {
+            background: #FF3F3A;
+            border: 1px solid #FF3F3A;
+            color: #fff;
+        }
+    }
+}
+
+
+//====================================================================================================
+
+
+.breadcrumbs {
+    display: flex;
+
+    // .breadcrumbs__item
+    &__item:last-child {
+        color: #FF3F3A;
+        font-weight: 700;
+    }
+
+    &__item a::before {
+        margin: 0 10px 0 2px;
+    }
+
+    &__item:not(:last-child) {
+        position: relative;
+        margin-right: 24px;
+
+        &::after {
+            content: '|';
+            position: absolute;
+            margin-left: 12px;
+        }
+    }
+}
