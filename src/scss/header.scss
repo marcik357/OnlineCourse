@@ -85,6 +85,7 @@
     // .menu__item
     &__item {
         position: relative;
+        transition: color .3s;
     }
 
     &__item:hover {
@@ -138,11 +139,6 @@
     &__consultation {
         margin-right: 36px;
         transition: all .5s;
-    }
-
-    &__consultation:hover {
-        background: rgba(255, 255, 255, 0);
-        color: #ff3f3a;
     }
 
     // .buttons__user

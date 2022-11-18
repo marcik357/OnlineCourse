@@ -53,16 +53,34 @@
 
         // .main-page__main
         &__main {
-            padding: 140px 0 80px;
+            padding: 100px 0 80px;
             min-height: 100vh;
+        }
+
+        &__why {
+            padding: 0 0 60px;
+        }
+
+        // .main-page__why
+        &__courses {
+            padding: 60px 0 60px;
+        }
+
+        // .main-page__benefits
+        &__benefits {
+            padding: 60px 0 60px;
         }
     }
 
     @media (max-width: 767.98px) {
 
+        &__main {
+            padding: 100px 0 80px;
+        }
+
         // .main-page__why
         &__why {
-            padding: 0 0 90px;
+            padding: 0 0 30px;
         }
 
         // .main-page__why
@@ -72,7 +90,7 @@
 
         // .main-page__benefits
         &__benefits {
-            padding: 30px 0 100px;
+            padding: 30px 0 60px;
         }
     }
 }
@@ -137,7 +155,7 @@
             border-radius: 50%;
             background: #FF3F3A;
             opacity: 0;
-            transition: opacity .3s;
+            transition: opacity .5s;
         }
 
         &:hover::before {
@@ -174,12 +192,31 @@
         flex: 0 1 50%;
         margin-right: -47px;
 
+        @media (max-width: 1230px) {
+            margin-right: 0;
+        }
+
         img {
             width: 100%;
         }
     }
 
     @media screen and (max-width: 1024px) {
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+
+        // .info-main__content
+        &__content {
+            flex: 0 0 100%;
+            padding-top: 44px;
+            text-align: center;
+        }
+
+        // .info-main__img
+        &__img {
+            margin: 0 auto;
+            flex: 0 0 60%;
+        }
 
         // .info-main__btn
         &__btn {
@@ -197,14 +234,7 @@
 
         // .info-main__content
         &__content {
-            padding-top: 44px;
             flex: 0 0 100%;
-            text-align: center;
-        }
-
-        // .info-main__img
-        &__img {
-            display: none;
         }
     }
 
@@ -258,6 +288,7 @@
 
             &::after {
                 content: '';
+                flex: 0 0 8px;
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
@@ -278,7 +309,7 @@
     &__text {}
 
     @media screen and (max-width: 933px) {
-        row-gap: 25px;
+        row-gap: 50px;
         column-gap: 0;
         padding: 0 30px;
 
@@ -338,6 +369,8 @@
     // .why__img
     &__img {
         flex: 0 1 705px;
+        border-radius: 4px;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -351,7 +384,7 @@
         flex: 0 0 390px;
     }
 
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
 
         // .why__container
         &__container {
@@ -408,6 +441,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
+        gap: 15px;
     }
 
     // .courses__info
@@ -450,6 +484,7 @@
         border-radius: 4px;
         display: flex;
         // gap: 32px;
+        overflow: hidden;
         transition: all .5s;
 
         &:hover {
@@ -543,9 +578,29 @@
         &__content {
             padding: 15px;
 
-            >* {
+            // >* {
 
-                font-size: 1rem;
+            //     font-size: 1rem;
+            // }
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        // .courses-cards__item
+        &__item {
+            flex-wrap: wrap;
+            // gap: 32px;
+
+        }
+
+        &__img {
+            flex: 0 0 100%;
+            height: 250px;
+            background: #FFCF2D;
+
+            img {
+                object-fit: contain;
             }
         }
     }
@@ -686,7 +741,7 @@
 
         // .benefit-tab__img
         &__img {
-            flex: 0 0 50vh;
+            flex: 0 0 40vh;
 
             img {
                 width: unset;
@@ -744,6 +799,7 @@
     border-radius: 4px;
     padding: 32px 40px;
     transition: all .3s;
+    row-gap: 15px;
 
     &:hover {
         box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
@@ -763,6 +819,7 @@
     &__date {
         justify-self: start;
         margin-right: 40px;
+        flex-shrink: 0;
     }
 
     // .event-card__month
@@ -811,11 +868,13 @@
         // .event-card__day
         &__day {
             font-size: 36px;
+            order: 1;
         }
 
         // .event-card__date
         &__date {
             margin-right: 10px;
+            order: 2;
         }
 
         // .event-card__month
@@ -828,9 +887,25 @@
             font-size: 1rem;
         }
 
+        // .event-card__info
+        &__info {
+            margin-right: 0;
+            flex: 0 0 100%;
+            order: 4;
+        }
+
+        // .event-card__button
+        &__button {
+            margin: 0 0 0 auto;
+            order: 3;
+        }
+    }
+    
+    @media (max-width: 479.98px) {
         // .event-card__button
         &__button {
             margin: 0;
+            order: 5;
         }
     }
 }
